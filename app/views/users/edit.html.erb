@@ -11,6 +11,15 @@
             <%= f.label :email %>
             <%= f.email_field :email, class: 'form-control' %>
             
+            <%= f.label :location %>
+            <%= f.text_field :location, class: 'form-control' %>
+            
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+            
+            <%= f.label :password_confirmation, "Confirmation" %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+            
             <%= f.submit "Save setting", class: "btn btn-lg btn-primary" %>
         <% end %>
     </div>
