@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :followings, :followers]
   before_action :correct_user, only: [:edit, :update]
   
   def show
@@ -31,7 +31,19 @@ class UsersController < ApplicationController
     end
   end
   
-    private
+  def followings
+    @title = @user.name + " 's  followings"
+    @users = @user.following_users
+    render 'show_follow'
+  end
+  
+  def followers
+    @title = @user.name + " 's  followers"
+    @users = @user.follower_users
+    render 'show_follow'
+  end
+  
+  private
     
   def user_params
     params.require(:user).permit(:name, :email, :location, :password, :password_confirmation)
