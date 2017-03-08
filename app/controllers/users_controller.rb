@@ -32,11 +32,15 @@ class UsersController < ApplicationController
   end
   
   def followings
-    redirect_to @user
+    @title = @user.name + " 's  followings"
+    @users = @user.following_users
+    render 'show_follow'
   end
   
   def followers
-    redirect_to @user
+    @title = @user.name + " 's  followers"
+    @users = @user.follower_users
+    render 'show_follow'
   end
   
   private
