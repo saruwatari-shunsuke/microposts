@@ -1,22 +1,40 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "navbar";
 
 /* universal */
 
 body {
     padding-bottom: 60px;
+    background-color: #369;
+    color: #fff;
 }
 section {
     overflow: auto;
 }
 textarea {
     resize: vertical;
+    background-color: #258;
 }
 .center {
     text-align: center;
 }
 .center h1 {
     margin-bottom: 10px;
+}
+.home_welcome {
+    background-color: #258;
+}
+
+a {
+  color: #7ad;
+}
+a:visited {
+  color: #69c;
+}
+a:hover {
+  color: #9cf;
+  text-decoration: none;
 }
 
 /* typography */
@@ -49,14 +67,14 @@ p {
     float: left;
     margin-right: 10px;
     font-size: 1.7em;
-    color: #39f;
+    color: #eef;
     text-transform: uppercase;
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
 }
 #logo:hover {
-    color: #39f;
+    color: #eef;
     text-decoration: none;
 }
 #error_explanation {
@@ -86,7 +104,7 @@ $gray-medium-light: #eaeaea;
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid #abc;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
@@ -136,7 +154,7 @@ aside {
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #58b;
   }
   .user {
     margin-top: 5em;
@@ -151,7 +169,7 @@ aside {
     }
   }
   .timestamp {
-    color: $gray-light;
+    color: #7ad;
     display: block;
     margin-left: 60px;
   }
