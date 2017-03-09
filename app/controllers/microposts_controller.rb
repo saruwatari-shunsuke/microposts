@@ -6,7 +6,9 @@ class MicropostsController < ApplicationController
             flash[:success] = "Micropost created!"
             redirect_to root_url
         else
-            render 'static_pages/home'
+            @feed_items = nil;
+            redirect_to root_url
+#            render 'static_pages/home'
         end
     end
     def destroy
