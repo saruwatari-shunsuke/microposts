@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   
   def show
-    @microposts = @user.microposts.order(created_at: :desc)
+    # @microposts = @user.microposts.order(created_at: :desc)
+    @microposts = @user.microposts.page(params[:page]).per(5).order(created_at: :desc)
   end
   
   def new
